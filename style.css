@@ -59,3 +59,13 @@ body{
     transform: rotate(360deg);
   }
 }
+.quoteDisplay  { 
+ display : flex;
+ flex-direction :column;
+ justify-content: space-around;
+gap :10px;
+}.quoteDisplay span:nth-child(2){
+  align-self : end;
+}.quoteDisplay span:nth-child(1) {
+  font-size : 1.2rem;
+}

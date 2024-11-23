@@ -15,10 +15,12 @@ function fetchQuote() {
   });
 }
 button.addEventListener("click", (e) => {
-  Display.textContent = "";
+  Display.innerHTML = "";
   Display.classList.add("spinner");
   fetchQuote().then((data) => {
     Display.classList.remove("spinner");
-    Display.textContent = data[0].quote;
+    Display.innerHTML = `<span>${data[0].quote}</span>
+      <span>--${data[0].author}</span>
+      `;
   });
 });
